@@ -1,53 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>crouton</title>
-	<style>
-.thumbnail {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    
-    width: auto;
-    height: auto;
-    
-    -webkit-transform: translate(-50%,-50%); /* Safari and Chrome */
-    -moz-transform: translate(-50%,-50%); /* Firefox */
-    -ms-transform: translate(-50%,-50%); /* IE 9 */
-    -o-transform: translate(-50%,-50%); /* Opera */
-    transform: translate(-50%,-50%);
-}
+<html><head>
+    <title>crouton</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+   
 
-.image {
-    width: 100%;
-    height: 100%;    
-}
 
-.image img {
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-  	-moz-transition: all 1s ease; /* Firefox */
-  	-o-transition: all 1s ease; /* IE 9 */
-  	-ms-transition: all 1s ease; /* Opera */
-  	transition: all 1s ease;
-}
+	<audio id="dig1">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+<audio id="dig2">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+<audio id="dig3">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+<audio id="dig4">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+    <div class="center-outer">
+      <div class="center-inner">
+        <div id="dig_div">
+          <img id="dig" src="crouton.png" onmousedown="javascript:twang()">
+        </div>
+      </div>
+    </div>
+	<script>
+		var dig = 1;
 
-.image:hover img {
-    -webkit-transform:scale(3); /* Safari and Chrome */
-    -moz-transform:scale(3); /* Firefox */
-    -ms-transform:scale(3); /* IE 9 */
-    -o-transform:scale(3); /* Opera */
-     transform:scale(3);
-}
-		</style>
-	<link rel="icon" type="image/png" href="crouton.png" sizes="32x32" />
-</head>
-<body>
-	<div class="wrapper" style="width: 1000px">
-		<div class="thumbnail">
-			<div class="image">
-				<img src="crouton.png" alt="crouton">
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+		function twang() {
+
+			document.getElementById("dig" + dig).play()
+			dig = dig + 1;
+
+			if (dig >= 5) {
+				dig = 1;
+			}
+		}
+	</script>
+  
+
+</body></html>

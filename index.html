@@ -1,48 +1,4 @@
-<html><head>
-    <title>crouton</title>
-    <style>
-	    	body, html, .center-inner, .center-outer { 
-	  height: 100%; 
-	}
-	
-	@font-face {
-		font-family: "8bitoperator";
-		src: url( "8bitoperator.ttf" );
-	}
-	
-	body {
-	  color: #afafaf;
-	  background-color: #ffffff;no
-	  font-family: "8bitoperator", monospace;
-	  margin: 0;
-	}
-	
-	#crouton {
-	  cursor: pointer;
-	  -webkit-touch-callout: none;
-	  -webkit-user-select: none;
-	  -khtml-user-select: none;
-	  -moz-user-select: none;
-	  -ms-user-select: none;
-	   user-select: none;
-	}
-	
-	#crouton:hover {
-	  transform: scale(1.1);
-	}
-	
-	#crouton:active {
-	  transform: scale(0.9);
-	}
-	
-	#contactinfo {
-	  color: #3d3d3d;
-	  position: absolute;
-	  font-size: 12px;
-	  bottom: 1%;
-	  right: 3%;
-	}
-	
+transition: all 1s ease;
 	
 	
 	a:hover, a:visited, a:link, a:active
@@ -90,12 +46,9 @@
     </div>
 	<script>
 		var crouton = 1;
-
 		function twang() {
-
 			document.getElementById("crouton" + crouton).play()
 			crouton = crouton + 1;
-
 			if (crouton >= 5) {
 				crouton = 1;
 			}

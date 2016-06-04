@@ -1,53 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>crouton</title>
-	<style>
-.thumbnail {
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    
-    width: auto;
-    height: auto;
-    
-    -webkit-transform: translate(-50%,-50%); /* Safari and Chrome */
-    -moz-transform: translate(-50%,-50%); /* Firefox */
-    -ms-transform: translate(-50%,-50%); /* IE 9 */
-    -o-transform: translate(-50%,-50%); /* Opera */
-    transform: translate(-50%,-50%);
-}
+transition: all 1s ease;
+	
+	
+	a:hover, a:visited, a:link, a:active
+	{
+	    text-decoration: none;
+	    color: white;
+	}
+	
+	
+	
+	.center-outer {
+		display: table;
+		margin: auto;
+	}
+	
+	.center-inner {
+		display: table-cell;
+		vertical-align: middle;
+	  text-align: center;
+	}
+    </style>
+  </head>
+  <body>
+   
 
-.image {
-    width: 100%;
-    height: 100%;    
-}
 
-.image img {
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-  	-moz-transition: all 1s ease; /* Firefox */
-  	-o-transition: all 1s ease; /* IE 9 */
-  	-ms-transition: all 1s ease; /* Opera */
-  	transition: all 1s ease;
-}
+	<audio id="crouton1">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+<audio id="crouton2">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+<audio id="crouton3">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+<audio id="crouton4">
+		<source src="http://puu.sh/pgBza/5342fb93f7.mp3" type="audio/mp3">
+	</audio>
+    <div class="center-outer">
+      <div class="center-inner">
+        <div id="crouton_div">
+          <img id="crouton" src="crouton.png" onmousedown="javascript:twang()">
+        </div>
+      </div>
+    </div>
+	<script>
+		var crouton = 1;
+		function twang() {
+			document.getElementById("crouton" + crouton).play()
+			crouton = crouton + 1;
+			if (crouton >= 5) {
+				crouton = 1;
+			}
+		}
+	</script>
+  
 
-.image:hover img {
-    -webkit-transform:scale(3); /* Safari and Chrome */
-    -moz-transform:scale(3); /* Firefox */
-    -ms-transform:scale(3); /* IE 9 */
-    -o-transform:scale(3); /* Opera */
-     transform:scale(3);
-}
-		</style>
-	<link rel="icon" type="image/png" href="moon-icon.png" sizes="32x32" />
-</head>
-<body>
-	<div class="wrapper" style="width: 1000px">
-		<div class="thumbnail">
-			<div class="image">
-				<img src="crouton.png" alt="crouton">
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+</body></html>

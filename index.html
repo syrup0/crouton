@@ -84,13 +84,13 @@ a:hover, a:visited, a:link, a:active
     <div class="center-outer">
       <div class="center-inner">
         <div id="crouton_div">
-          <img id="crouton" src="crouton.png" onmousedown="javascript:crouton()">
+          <img id="crouton" src="crouton.png" onmousedown="javascript:eat()">
         </div>
       </div>
     </div>
 	<script>
 		var crouton = 1;
-		function crouton() {
+		function eat() {
 			document.getElementById("crouton" + crouton).play()
 			crouton = crouton + 1;
 			if (crouton >= 5) {

@@ -1,6 +1,69 @@
 <html><head>
     <title>crouton</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+	    	body, html, .center-inner, .center-outer { 
+	  height: 100%; 
+	}
+	
+	@font-face {
+		font-family: "8bitoperator";
+		src: url( "8bitoperator.ttf" );
+	}
+	
+	body {
+	  color: #afafaf;
+	  background-color: #ffffff;no
+	  font-family: "8bitoperator", monospace;
+	  margin: 0;
+	}
+	
+	#dig {
+	  cursor: pointer;
+	  -webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	  -khtml-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	   user-select: none;
+	}
+	
+	#dig:hover {
+	  transform: scale(1.1);
+	}
+	
+	#dig:active {
+	  transform: scale(0.9);
+	}
+	
+	#contactinfo {
+	  color: #3d3d3d;
+	  position: absolute;
+	  font-size: 12px;
+	  bottom: 1%;
+	  right: 3%;
+	}
+	
+	
+	
+	a:hover, a:visited, a:link, a:active
+	{
+	    text-decoration: none;
+	    color: white;
+	}
+	
+	
+	
+	.center-outer {
+		display: table;
+		margin: auto;
+	}
+	
+	.center-inner {
+		display: table-cell;
+		vertical-align: middle;
+	  text-align: center;
+	}
+    </style>
   </head>
   <body>
    
@@ -20,21 +83,21 @@
 	</audio>
     <div class="center-outer">
       <div class="center-inner">
-        <div id="dig_div">
-          <img id="dig" src="crouton.png" onmousedown="javascript:twang()">
+        <div id="crouton_div">
+          <img id="crouton" src="crouton.png" onmousedown="javascript:twang()">
         </div>
       </div>
     </div>
 	<script>
-		var dig = 1;
+		var crouton = 1;
 
 		function twang() {
 
-			document.getElementById("dig" + dig).play()
-			dig = dig + 1;
+			document.getElementById("crouton" + crouton).play()
+			crouton = crouton + 1;
 
-			if (dig >= 5) {
-				dig = 1;
+			if (crouton >= 5) {
+				crouton = 1;
 			}
 		}
 	</script>
